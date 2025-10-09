@@ -1,0 +1,155 @@
+* {
+    font-family: Georgia;
+}
+
+header, 
+nav, 
+footer {
+    background-color: #339DF2; 
+    color: #fcd836;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    color: #fcd836;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: purple;
+}
+
+body {
+    background-color: #fcd836;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+section {
+    color: #339DF2;
+    border: 1px solid #339DF2;
+    padding: 20px;
+    /*gap between boxes */
+    margin: 20px auto;
+    max-width: 750px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+main {
+    background-color: #fcd836;
+}
+
+.intro {
+    text-align: left;
+}
+/*Project 1: Buttons*/
+button {
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.btn-hover:hover {
+    background: #339df2;
+    color: #fcd836;
+    border-radius: 5px;
+}
+
+.btn-glow {
+    background: #339df2;
+    color: #fcd836;
+    border-radius: 5px;
+    transition: box-shadow 0.25s;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 20px #339df2;
+}
+
+/*Projet 2: Photo Gallery*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /*Gap between images*/
+    justify-content: center; /*Centers the pictures*/
+}
+
+.gallery img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+}
+
+/*Hover Effect 1: Scale and Fade*/
+.hover-one:hover {
+    transform: rotate(-5deg) scale(1.25);
+    box-shadow: 0 8px 15px black;
+    opacity: 1;
+}
+
+/*Hover Effect 2: Grayscale to Color Fade*/
+.hover-two:hover {
+    filter: grayscale(100%); /*Starts the image in black and white*/
+    transition: filter 0.4s, transform 0.3s; /*Smoothly animates both filters and movements*/
+    transform: scale(1.25);
+}
+
+/*Hover Effect 3: Scale and Fade*/
+.hover-three:hover{
+    transform: scale(1.25);
+    opacity: 0.25;
+}
+
+/*Project 3: Styled Quote Box*/
+.project3 {
+    text-align: center;
+    max-width: 50%;
+}
+
+.project3 h3 { /*Specifically selects the header and blockquote of the class*/
+    color: black;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 15px;
+    text-transform: uppercase; /*Transforms all text to uppercase*/
+    letter-spacing: 1px; /*Add space in between letters*/
+}
+
+.quote-box {
+    font-family: 'Georgia', serif;
+    color: black;
+    font-style: italic; /*Italicizes the quote; just like "tesxt-transform"*/
+    background-image: linear-gradient(135deg, #339df2, #fcd836), url('https://www.transparenttextures.com/patterns/crisp-paper-ruffles.png');
+    background-blend-mode: multiply; /*Blends the texture better*/
+    /*^^^ Adds a textured background with a gradient blend*/
+    padding: 20px 30px; /*Adds spacing to increase the quote-box size*/
+    border-left: 6px solid black; /*Adds a border on the left side*/
+    border-radius: 10px;
+    box-shadow: 0 4px 10px black;/*#1 #2 #3; #1-Top shadow, #2- Side Shadow, #3- Bottom Shadow*/
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease
+}
+
+.quote-box:hover {
+    transform: translateY(-5px); /*Slightly lifts the quote box*/
+    box-shadow: 0 4px 14px black;
+    background-image: linear-gradient(135deg, #fcd836, #339df2), url('https://www.transparenttextures.com/patterns/crisp-paper-ruffles.png');
+    /*Swaps the gradient color on hover*/
+}
+
+.quote-box cite {
+    display: block; /*Ensures the cite remains on the bottom line by itself*/
+    margin-top: 12px;
+    font-style: normal; /*Reverts to default, normal font text*/
+    font-weight: bold;
+    color: #339df2;
+    text-align: right;
+    letter-spacing: 0.5px;
+}
